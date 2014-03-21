@@ -836,6 +836,10 @@ $.extend($.validator, {
 				this.formSubmitted = false;
 			}
 		},
+		
+		hasPendingRequests: function() {
+			return (this.pendingRequest > 0);
+		},
 
 		previousValue: function( element ) {
 			return $.data(element, "previousValue") || $.data(element, "previousValue", {
